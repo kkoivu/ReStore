@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 import { Product } from "../../app/models/product";
 
 interface Props {
-    product: Product;
+    product: Product
 }
 
 export default function ProductCard({ product }: Props) {
     return (
         <Card>
-            <CardHeader
+            <CardHeader 
                 avatar={
                     <Avatar sx={{bgcolor: 'secondary.main'}}>
                         {product.name.charAt(0).toUpperCase()}
@@ -21,7 +21,7 @@ export default function ProductCard({ product }: Props) {
                 }}
             />
             <CardMedia
-                sx={{ height: 140, backgroundSize: 'contain', bgcolor: 'primary.light' }}
+                sx={{height: 140, backgroundSize: 'contain', bgcolor: 'primary.light'}}
                 image={product.pictureUrl}
                 title={product.name}
             />
